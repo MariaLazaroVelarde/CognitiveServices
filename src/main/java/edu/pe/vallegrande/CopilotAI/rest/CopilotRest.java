@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/copilot")
 @RequiredArgsConstructor
@@ -25,7 +26,7 @@ public class CopilotRest {
     return service.crearConsulta(pregunta)
             .map(ResponseEntity::ok)
             .onErrorResume(e -> Mono.just(ResponseEntity.badRequest().body(null)));
-}
+    }
 
     // Editar una consulta existente
     @PutMapping("/editar/{id}")

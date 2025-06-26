@@ -3,12 +3,12 @@ server:
 
 spring:
   r2dbc:
-    #url: ${DATABASE_URL}
-    #username: ${DATABASE_USERNAME}
-    #password: ${DATABASE_PASSWORD}
-    url: r2dbc:postgresql://ep-bitter-sunset-a8zocnvu-pooler.eastus2.azure.neon.tech/copilot?sslmode=require&channel_binding=require
-    username: copilot_owner
-    password: npg_mhHyVb12LuCq
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    #url: r2dbc:postgresql://ep-bitter-sunset-a8zocnvu-pooler.eastus2.azure.neon.tech/copilot?sslmode=require&channel_binding=require
+    #username: copilot_owner
+    #password: npg_mhHyVb12LuCq
 
 rapidapi:
   url: ${RAPIDAPI_URL}

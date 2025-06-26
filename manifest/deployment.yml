@@ -1,0 +1,23 @@
+# kubectl apply -f deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: copilot-be
+  namespace: marialazaro
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: copilot-be
+  template:
+    metadata:
+      labels:
+        app: copilot-be
+    spec:
+      containers:
+      - name: copilot-be
+        image: marialazaro/copilot:2abd66f9343187b87ad8eed34a00cbadad1a9cc6   # Reemplaza con tu imagen DockerHub
+        imagePullPolicy: IfNotPresent           # Evita bajar la imagen si ya existe
+        envFrom:
+            - secretRef:
+                name: credentials               # Cargar todo el Secret como variables de entorno

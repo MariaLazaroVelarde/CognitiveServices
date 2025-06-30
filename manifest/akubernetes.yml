@@ -35,4 +35,4 @@ curl http://192.168.49.2:30001/v1/api/copilot/id/1
 kubectl port-forward service/copilot-be 8090:80
 
 # ver los logs del pod (logs del proyecto)
-kubectl logs nombre-pod
+kubectl logs pod/copilot-be-5fbd58db48-7w5wt

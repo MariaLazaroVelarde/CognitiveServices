@@ -5,9 +5,9 @@ services:
     image: marialazaro/copilot:latest      # Nombre de la imagen a utilizar
     container_name: marifer # Nombre específico para el contenedor
     ports:
-      - "8080:8080"  # Mapea el puerto 808# del host al 808# del contenedor
+      - "8080:8080" # Mapea el puerto 808# del host al 808# del contenedor
     environment:
-      PORT: 8080     # Variable de entorno que Spring Boot leerá como `server.port`
+      PORT: 8080    # Variable de entorno que Spring Boot leerá como `server.port`
       DATABASE_URL: "r2dbc:postgresql://ep-bitter-sunset-a8zocnvu-pooler.eastus2.azure.neon.tech/copilot?sslmode=require&channel_binding=require"
       DATABASE_USERNAME: "copilot_owner"
       DATABASE_PASSWORD: "npg_mhHyVb12LuCq"

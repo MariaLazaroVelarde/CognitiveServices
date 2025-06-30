@@ -8,7 +8,7 @@ spec:
   type: NodePort  # Expondrá el puerto a través de un nodo del clúster
   ports:
     - port: 80           # Puerto interno del servicio (acceso desde el clúster) http://svc:80
-      targetPort: 8085   # Puerto donde escucha tu contenedor (en el Pod)
+      targetPort: 8080   # Puerto donde escucha tu contenedor (en el Pod)
       nodePort: 30001    # Puerto expuesto desde fuera del clúster (acceso externo) Rango válido: 30000-32767
   selector:
     app: copilot-be # Debe coincidir con los labels del Deployment/Pod
